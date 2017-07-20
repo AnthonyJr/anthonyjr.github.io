@@ -17,6 +17,7 @@ Contact or whatever - put twitter feed.
 <html>
 
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -26,6 +27,33 @@ Contact or whatever - put twitter feed.
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="script.js"></script>
     <title>Finding ReMo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
 
 
 
@@ -35,7 +63,7 @@ Contact or whatever - put twitter feed.
     <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
       <!-- Avatar image in top left corner -->
       <img src="img/fishbowl.jpg" style="width:100%">
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+      <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-black">
         <i class="fa fa-home w3-xxlarge"></i>
         <p>HOME</p>
       </a>
@@ -43,13 +71,9 @@ Contact or whatever - put twitter feed.
         <i class="fa fa-user w3-xxlarge"></i>
         <p>ABOUT</p>
       </a>
-      <a href="https://twitter.com/DamnReMo/" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fa fa-twitter w3-xxlarge"></i>
-        <p></p>
-      </a>
-      <a href="https://www.youtube.com/user/DamnReMo" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-        <i class="fa fa-youtube w3-xxlarge"></i>
-        <p></p>
+      <a href="#music" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-music w3-xxlarge"></i>
+        <p>MUSIC</p>
       </a>
       <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
         <i class="fa fa-envelope w3-xxlarge"></i>
@@ -63,7 +87,7 @@ Contact or whatever - put twitter feed.
       <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
         <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
         <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-        <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+        <a href="#music" class="w3-bar-item w3-button" style="width:25% !important">MUSIC</a>
         <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
       </div>
     </div>
@@ -74,16 +98,16 @@ Contact or whatever - put twitter feed.
 
 	</div>
 <!-- first  div  -->
-	<div class=" w3-container w3-padding-64" id="sec1">
+	<!-- <div class=" w3-container w3-padding-64" id="sec1">
 
-	</div>
+	</div> -->
 
 
 
 	<!-- Second Parallax Image with Portfolio Text -->
-	<div class="bgimg-2 w3-display-container w3-opacity-min">
+	<div class="bgimg-2 w3-display-container w3-opacity-min" id="about">
 	  <div class="w3-display-middle">
-	    <span class="w3-xxlarge w3-text-white w3-wide">Photos</span>
+	    <span class="w3-xxlarge w3-text-white w3-wide">ABOUT</span>
 	  </div>
 	</div>
 
@@ -96,9 +120,9 @@ Contact or whatever - put twitter feed.
 
 
 	<!-- Third Parallax Image with Portfolio Text -->
-	<div class="bgimg-3 w3-display-container w3-opacity-min">
+	<div class="bgimg-3 w3-display-container w3-opacity-min" id="music">
 	  <div class="w3-display-middle">
-	     <span class="w3-xxlarge w3-text-white w3-wide">  </span>
+	     <span class="w3-xxlarge w3-text-white w3-wide"> MUSIC </span>
 	  </div>
 	</div>
 
@@ -106,6 +130,18 @@ Contact or whatever - put twitter feed.
 	<div class=" w3-container w3-padding-64" id="sec3">
 
 	</div>
+
+  <div class="bgimg-4 w3-display-container w3-opacity-min" id="contact">
+	  <div class="w3-display-middle">
+	     <span class="w3-xxlarge w3-text-white w3-wide">  CONTACT </span>
+	  </div>
+	</div>
+
+	<!-- Container (Contact Section) -->
+	<div class=" w3-container w3-padding-64" id="sec4">
+
+	</div>
+
 
   </body>
 
