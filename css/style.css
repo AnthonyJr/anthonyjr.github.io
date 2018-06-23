@@ -6,36 +6,24 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#sec1, #sec2, #sec3, #sec4 {
-  background-color: #0C1011; /* or use this yellow #FFFFAF*/
-}
-
-#sec2 {
-
-}
-#sec2_descrip{
-    margin-left: 15%;
-    margin-right: auto;
+    background-color: black
 }
 
 
-/* First image (Logo. Full height) */ /* this class works */
-/*.bgimg-1 {
-  background-image: url('../img/FR.jpg');
-  background-size:contain;
-  height: inherit;
-}*/
+
+
+#sec2, #sec3, #sec4, #sec5 {
+  background-color: #0C1011;
+}
 
 .bgimg-1 {
   background-color: #302F31;
-  background-image: url('../img/FR.jpg');
+  background-image: url('../img/logo.jpg');
   background-size:contain;
   background-position: center;
 
@@ -48,30 +36,28 @@ body, html {
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-  background-image: url('../img/headassery1.jpg');
-  animation-name: background;
-  animation-duration: 25s;
-  animation-iteration-count: infinite;
+  background-image: url('../img/mario.jpg');
+
   background-size:contain;
   max-height: 10220px;
   max-width: 10220px;
-  height: 100%;
+  height: 400px;
   width: 100%;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
   background-color: #0C1011;
-  background-image: url('../img/FRback.jpg');
+  background-image: url('../img/smash.png');
   background-size:contain;
   max-height: 10220px;
   max-width: 10220px;
-  height: 100%;
+  height: 400px;
   width: 100%;
 }
 
 .bgimg-4 {
-
+  background-image: url('../img/minecraft.jpg');
 
   background-color: #0C1011;
   background-size:contain;
@@ -81,6 +67,25 @@ body, html {
   width: 100%;
 }
 
+.bgimg-5 {
+  background-image: url('../img/splatoon2.jpg');
+  background-color: #0C1011;
+  background-size: contain;
+  max-height: 10220px;
+  max-width: 10220px;
+  height: 400px;
+  width: 100%;
+}
+
+.bgimg-6 {
+  background-image: url('../img/halo.jpg');
+  background-color: #0C1011;
+  background-size: contain;
+  max-height: 10220px;
+  max-width: 10220px;
+  height: 400px;
+  width: 100%;
+}
 
 
 .w3-wide {letter-spacing: 10px;}
@@ -88,50 +93,7 @@ body, html {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4,.bgimg-5,.bgimg-6 {
         background-attachment: scroll;
     }
-}
-
-
-@keyframes fader {
-  from {background-color: white;}
-  to {background-image: url('../img/FR.jpg');}
-}
-
-@keyframes background {
-  0% {
-    background: url("../img/headassery2.jpg");
-    background-attachment: fixed;
-    background-position: top 50px;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  25% {
-    background: url("../img/headassery3.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  50% {
-    background: url("../img/headassery1.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  75% {
-    background: url("../img/headassery2.jpg");
-    background-attachment: fixed;
-    background-position: top 50px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-  100% {
-    background: url("../img/headassery3.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
