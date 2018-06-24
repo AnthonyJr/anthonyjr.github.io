@@ -2,9 +2,10 @@
 
 <html>
 
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/jpg"href="img/logo.jpg" />
+    <meta name="theme-color" content="#8ab619" />
+    <link rel="icon" type="image/jpg" href="img/logo.jpg" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,214 +16,210 @@
     <title>Top Quality Gaming</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
+        $(document).ready(function() {
 
-    $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
 
-      
-      
-      // Add smooth scrolling to all links
-      $("a").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
 
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
+                    // Store hash
+                    var hash = this.hash;
 
-          // Store hash
-          var hash = this.hash;
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
 
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function(){
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
-    });
-
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
     </script>
 
+</head>
 
-
-  </head>
-
-  <body>
-<!-- Navbar -->
+<body>
+    <!-- Navbar -->
     <div class="w3-top">
-<div class="w3-bar w3-black w3-card" style="background-color: #8ab619!important">
-        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()"
-          title="Toggle Navigation Menu">
-          <i class="fa fa-bars"></i>
-        </a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-        <a href="#service" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICE</a>
-        <a href="#price" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PRICE</a>
-        <a href="https://www.google.com" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESERVE NOW!</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+        <div class="w3-bar w3-black w3-card" style="background-color: #8ab619!important">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="#service" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICE</a>
+            <a href="#price" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PRICE</a>
+            <a href="https://www.google.com" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESERVE NOW!</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
 
-
-      </div>
+        </div>
     </div>
 
     <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
     <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px; background-color:#8ab619">
-      <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
-      <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
-      <a href="#service" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICE</a>
-      <a href="#price" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRICE</a>
-      <a href="#reservation" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RESERVE NOW!</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+        <a href="#service" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICE</a>
+        <a href="#price" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRICE</a>
+        <a href="https://www.google.com" class="w3-bar-item w3-button w3-padding-large">RESERVE NOW!</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
 
     </div>
 
+    <!-- First Parallax Image with Logo Text -->
 
-	<!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1  w3-opacity-min animated fadeIn" id="home"></div>
 
-  <div class="bgimg-1  w3-opacity-min animated fadeIn" id="home"></div>
+    <!-- Second Parallax Image with Portfolio Text -->
+    <div class="bgimg-2 w3-display-container w3-grayscale" id="about">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">ABOUT</span>
+        </div>
+    </div>
 
+    <!-- Container (Portfolio Section) -->
+    <!-- w3-content -->
+    <div class=" w3-container w3-padding-64" id="sec2">
 
-
-
-	<!-- Second Parallax Image with Portfolio Text -->
-	<div class="bgimg-2 w3-display-container w3-grayscale" id="about">
-	  <div class="w3-display-middle">
-	    <span class="w3-xxlarge w3-text-white w3-wide">ABOUT</span>
-	  </div>
-	</div>
-
-	<!-- Container (Portfolio Section) --> <!-- w3-content -->
-	<div class=" w3-container w3-padding-64" id="sec2">
-
-<h3 id="sec2_descrip" class="w3-right" style="">Top Quality Gaming is a mobile video gaming trailer located just outside 
+        <h3 id="sec2_descrip" class="w3-right">Top Quality Gaming is a mobile video gaming trailer located just outside 
   of Nashville, TN. Top Quality Gaming was established to help build personal connections and strengthen bonds while gaming. 
-  The trailer comes equipped with 7, 32" television screens for general gaming and 3, 19" inch screens for virtual reality play. 
   It is designed for everyone to have their choice of play, whether solo, playing an individual game, or with a group, playing the 
-  same game. Our trailer is equipped with the latest game systems, including: Xbox One X, PS4 Pro, PS4 VR, Nintendo Switch, Wii, 
-  and Wii U. We also offer retro gaming upon request.</h3>
-<br>
-<br>
-<h3 class="w3-right" id="sec2_descrip">Let Top Quality Gaming provide you and your guests with fun and excitement at all of your events. Call us now for booking
+  same game.</h3>
+        <br>
+        <br>
+        <h3 class="w3-right" id="sec2_descrip">Let Top Quality Gaming provide you and your guests with fun and excitement at all of your events. Call us now for booking
   inquiries at (615) 218-7235 or email us at gamingtopquality@gmail.com. We look forward to serving your event!</h3>
 
-
-
-	</div>
-
-
-
-	<!-- Third Parallax Image with Portfolio Text -->
-	<div class="bgimg-3 w3-display-container w3-opacity-med" id="service">
-	  <div class="w3-display-middle">
-	     <span class="w3-xxlarge w3-text-white w3-wide"> SERVICE </span>
-	  </div>
-	</div>
-
-	<!-- Container (Contact Section) -->
-	<div class=" w3-container w3-padding-64" id="sec3">
-
-    <ul class="w3-ul w3-card-4">
-      <li class="w3-bar">
-        <img src="img/birthday.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Birthday</span>
-          <br>
-          <span>  </span>
-        </div>
-      </li>
-
-      <li class="w3-bar">
-        <img src="img/graduation.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Graduation</span>
-          <br>
-          <span> <!-- say something here --> </span>
-        </div>
-      </li>
-
-      <li class="w3-bar">
-        <img src="img/block.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Corporate Events </span>
-          <br>
-          <span> </span>
-        </div>
-      </li>
-      <li class="w3-bar">
-        <img src="img/block.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Block Parties</span>
-          <br>
-        </div>
-      </li>
-      <li class="w3-bar">
-        <img src="img/carnival.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Carnivals</span>
-          <br>
-        </div>
-      </li>
-      <li class="w3-bar">
-        <img src="img/fundraiser.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
-        <div class="w3-bar-item">
-          <span class="w3-large">Fundraiser</span>
-          <br>
-        </div>
-      </li>
-    </ul>
-  <h3>*Other event ideas available upon request</h3>
-  </div>
-  
-  <div class="bgimg-4 w3-display-container w3-opacity-med" id="price">
-    <div class="w3-display-middle">
-      <span class="w3-xxlarge w3-text-white w3-wide"> PRICES </span>
-    </div>
-  </div>
-  
-  <!-- Container (Prices Section) -->
-  <div class=" w3-container w3-padding-64" id="sec4">
-    <h3> We offer a competetive price that includes:</h3>
-    <ul>
-      <li>20 Invitations along with a lanyard</li>
-      <li>7 32" TVs</li>
-      <li>3 19" TVS</li>
-    </ul>
-
-    <h3>All Day / Everyday: 1hr - $185 | 2hr - $285 | additional hrs - $85</h3>
-  </div>
-
-
-
-  <div class="bgimg-6 w3-display-container w3-opacity-med" id="contact">
-	  <div class="w3-display-middle">
-	     <span class="w3-xxlarge w3-text-white w3-wide">  CONTACT </span>
-	  </div>
-	</div>
-
-	<!-- Container (Contact Section) -->
-	<div class=" w3-container w3-padding-64" id="sec4">
-    <div class="w3-center">
-      <p>For all inquiries, email:
-        <a href="mailto:gamingtopquality@gmail.com?Subject=Gaming%20again" target="_top"><br>gamingtopquality@gmail.com</a>
-      </p>
-      <br>
-      <a href="https://www.instagram.com/topqualitygaming/" target="_blank"><img src="img/social-instagram-white.svg"></a>
-      <a href="https://twitter.com/topqualitygami1" target="_blank"><img src="img/social-twitter-white.svg"></a>
-      <a href="https://www.youtube.com/topquality/DamnReMo" target="_blank"><img src="img/social-youtube-white.svg"></a>
-
     </div>
 
-  </div>
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-med" id="service">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide"> SERVICE </span>
+        </div>
+    </div>
 
-  <footer class="w3-center" style="background-color: #0C1011"> © 2017 THQ </footer>
+    <!-- Container (Contact Section) -->
+    <div class=" w3-container w3-padding-64" id="sec3">
 
+        <ul class="w3-ul w3-card-4">
+            <li class="w3-bar">
+                <img src="img/birthday.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                <div class="w3-bar-item">
+                    <span class="w3-large">Birthday</span>
+                    <br>
+                    <span>  </span>
+                </div>
+            </li>
 
+            <li class="w3-bar">
+                <img src="img/graduation.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                <div class="w3-bar-item">
+                    <span class="w3-large">Graduation</span>
+                    <br>
+                    <span> <!-- say something here --> </span>
+                </div>
+            </li>
 
-  </body>
+            <li class="w3-bar">
+                <img src="img/block.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                <div class="w3-bar-item">
+                    <span class="w3-large">Corporate Events </span>
+                    <br>
+                    <span> </span>
+                </div>
+            </li>
+            <li class="w3-bar">
+                <img src="img/block.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                <div class="w3-bar-item">
+                    <span class="w3-large">Block Parties</span>
+                    <br>
+                </div>
+            </li>
+            <li class="w3-bar">
+                <img src="img/carnival.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                <div class="w3-bar-item">
+                    <span class="w3-large">Carnivals</span>
+                    <br>
+                </div>
+            </li>
+            <li class="w3-bar">
+                <img src="img/fundraiser.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                <div class="w3-bar-item">
+                    <span class="w3-large">Fundraiser</span>
+                    <br>
+                </div>
+            </li>
+        </ul>
+        <h3>*Other event ideas available upon request</h3>
+    </div>
 
+    <div class="bgimg-4 w3-display-container w3-opacity-med" id="price">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide"> PRICES </span>
+        </div>
+    </div>
+
+    <!-- Container (Prices Section) -->
+    <div class=" w3-container w3-padding-64" id="sec4">
+        <h3> We offer a competetive price that is the same everday which includes:</h3>
+        <ul>
+            <li>20 Invitations along with a lanyard</li>
+            <li>7 32" (HD) television screens for general gaming</li>
+            <li>3 19" (HD) inch screens for virtual reality play.</li>
+            <li>Our trailer is equipped with the latest game systems, including: Xbox One X, PS4 Pro, PS4 VR, Nintendo Switch, Wii, and Wii U. We also offer retro gaming upon request</li>
+        </ul>
+        <span class="w3-tag w3-xxlarge w3-padding w3-red w3-center">
+    <strong>
+    1HR $185 <br>
+    2HR $285 <BR>
+    ADDITIONAL HRS - $85
+    </strong>
+    </span>
+
+        <br><a href="https://www.google.com">Book with us NOW!</a>
+    </div>
+
+    <div class="bgimg-6 w3-display-container w3-opacity-med" id="contact">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">  CONTACT </span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class=" w3-container w3-padding-64" id="sec4">
+        <div class="w3-center">
+            <div class="w3-row w3-padding-32">
+                <div class="w3-col m6 w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker" style="width:30px"></i> Nashville, TN
+                    <br>
+                    <i class="fa fa-phone" style="width:30px"></i> Phone: 615-218-7235
+                    <br>
+                    <i class="fa fa-envelope" style="width:30px"> </i> Email: <a href="mailto:gamingtopquality@gmail.com?Subject=Gaming%20again" target="_top">gamingtopquality@gmail.com</a>
+                    <br>
+                </div>
+            </div>
+            <a href="https://www.instagram.com/topqualitygaming/" target="_blank">
+                <img src="img/social-instagram-white.svg">
+            </a>
+            <a href="https://twitter.com/topqualitygami1" target="_blank">
+                <img src="img/social-twitter-white.svg">
+            </a>
+            <a href="https://www.facebook.com/Top-Quality-Gaming-1967430873267641/" target="_blank">
+                <img src="img/social-facebook-white.svg">
+            </a>
+
+        </div>
+      </div>
+    <footer class="w3-center" style="background-color: #0C1011"> © 2017 Top Quality Gaming </footer>
+
+</body>
 
 </html>
