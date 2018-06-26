@@ -17,10 +17,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-    crossorigin="anonymous">
+        crossorigin="anonymous">
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             var myIndex = 0;
             carousel();
 
@@ -28,15 +28,17 @@
                 var i;
                 var x = document.getElementsByClassName("mySlides");
                 for (i = 0; i < x.length; i++) {
-                  x[i].style.display = "none";  
+                    x[i].style.display = "none";
                 }
                 myIndex++;
-                if (myIndex > x.length) {myIndex = 1}    
-                x[myIndex-1].style.display = "block";  
+                if (myIndex > x.length) {
+                    myIndex = 1
+                }
+                x[myIndex - 1].style.display = "block";
                 setTimeout(carousel, 2000); // Change image every 2 seconds
             }
             // Add smooth scrolling to all links
-            $("a").on('click', function(event) {
+            $("a").on('click', function (event) {
 
                 // Make sure this.hash has a value before overriding default behavior
                 if (this.hash !== "") {
@@ -50,7 +52,7 @@
                     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
-                    }, 800, function() {
+                    }, 800, function () {
 
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         window.location.hash = hash;
@@ -66,7 +68,8 @@
     <!-- Navbar -->
     <div class="w3-top">
         <div class="w3-bar w3-black w3-card" style="background-color: #8ab619!important">
-            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()"
+                title="Toggle Navigation Menu">
                 <i class="fa fa-bars"></i>
             </a>
             <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
@@ -104,16 +107,14 @@
     <!-- w3-content -->
     <div class=" w3-container w3-padding-64" id="sec2">
 
-        <h3 id="sec2_descrip" class="w3-right">Top Quality Gaming is a mobile video gaming trailer located just outside 
-  of Nashville, TN. Top Quality Gaming was established to help build personal connections and strengthen bonds while gaming. 
-  It is designed for everyone to have their choice of play, whether solo, playing an individual game, or with a group, playing the 
-  same game.</h3>
-        <br>
-        <br>
-        <h3 class="w3-right" id="sec2_descrip">Let Top Quality Gaming provide you and your guests with fun and excitement at all of your events. Call us now for booking
-  inquiries at (615) 218-7235 or email us at gamingtopquality@gmail.com. We look forward to serving your event!</h3>
+        <h3 id="sec2_descrip" class="w3-right">Top Quality Gaming is a mobile video gaming trailer located just outside of Nashville, TN. Top Quality Gaming was
+            established to help build personal connections and strengthen bonds while gaming. It is designed for everyone
+            to have their choice of play, whether solo, playing an individual game, or with a group, playing the same game.</h3>
+        <h3 class="" id="sec2_descrip">Let Top Quality Gaming provide you and your guests with fun and excitement at all of your events. Call us now for
+            booking inquiries at (615) 218-7235 or email us at gamingtopquality@gmail.com. We look forward to serving your
+            event!</h3>
 
-        <h3>Camice Watson, Owner</h3>
+        <h3>- Camice Watson, Owner</h3>
 
     </div>
 
@@ -127,80 +128,80 @@
     <!-- Container (Contact Section) -->
     <div class=" w3-container w3-padding-64" id="sec3">
 
-    <div class="row slideanim">
-        <div class="col-sm-4">
-    <span class="glyphicon fas fa-birthday-cake logo-small"></span>
-            <h4>BIRTHDAY EVENTS</h4>
-            <p>Give the gift of gaming!</p>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-birthday-cake logo-small"></span>
+                <h4>BIRTHDAY EVENTS</h4>
+                <p>Give the gift of gaming!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-briefcase logo-small"></span>
+                <h4>COPORATE EVENTS</h4>
+                <p>Throw an office party for the staff!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-utensils logo-small"></span>
+                <h4>SCHOOL EVENTS</h4>
+                <p>Celerate with fun in the sun with us!</p>
+            </div>
         </div>
-        <div class="col-sm-4">
-            <span class="glyphicon fas fa-briefcase logo-small"></span>
-            <h4>COPORATE EVENTS</h4>
-            <p>Throw an office party for the staff!</p>
+        <br>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-graduation-cap logo-small"></span>
+                <h4>GRADUATION EVENTS</h4>
+                <p>Celebrate this milestone in life with videogames!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-ribbon logo-small"></span>
+                <h4>FUNDRAISING EVENTS</h4>
+                <p> Rent us out and host tournaments for a good cause! </p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-key logo-small"></span>
+                <h4>GRAND OPENINGS</h4>
+                <p> Opening a business? We got you covered.</p>
+            </div>
         </div>
-        <div class="col-sm-4">
-            <span class="glyphicon fas fa-utensils logo-small"></span>
-            <h4>SCHOOL EVENTS</h4>
-            <p>Celerate with fun in the sun with us!</p>
+        <br>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-crown logo-small"></span>
+                <h4>CARNIVALS</h4>
+                <p>Rent us out at a fair!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-gamepad logo-small"></span>
+                <h4>GAMING NIGHTS</h4>
+                <p>Rent the game truck for a wild night with your friends!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-users logo-small"></span>
+                <h4>FAMILY GATHERING</h4>
+                <p> Settle that rivalry in Mortal Kombat!</p>
+            </div>
         </div>
-    </div>
-    <br>
-    <br>
-    <div class="row slideanim">
-        <div class="col-sm-4">
-            <span class="glyphicon fas fa-graduation-cap logo-small"></span>
-            <h4>GRADUATION EVENTS</h4>
-            <p>Celebrate this milestone in life with videogames!</p>
+        <br>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-female logo-small"></span>
+                <h4>BACHELORETTE PARTIES</h4>
+                <p>Spend your last night as a single lady with your girlfriends!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-male logo-small"></span>
+                <h4>BACHELOR PARTIES</h4>
+                <p>Spend your last night single with the fellas!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-comment logo-small"></span>
+                <h4>ANYTHING!</h4>
+                <p>We will come to you with any event you can think of!</p>
+            </div>
         </div>
-        <div class="col-sm-4">
-            <span class="glyphicon fas fa-ribbon logo-small"></span>
-            <h4>FUNDRAISING EVENTS</h4>
-            <p> Rent us out and host tournaments for a good cause! </p>
-        </div>
-        <div class="col-sm-4">
-            <span class="glyphicon fas fa-key logo-small"></span>
-            <h4>GRAND OPENINGS</h4>
-            <p> Opening a business? We got you covered.</p>
-        </div>
-    </div>
-<br>
-<br>
-    <div class="row slideanim">
-        <div class="col-sm-4">
-            <span class="glyphicon fas fa-crown logo-small"></span>
-            <h4>CARNIVALS</h4>
-            <p>Rent us out at a fair!</p>
-        </div>
-        <div class="col-sm-4">
-            <span class="glyphicon fas fa-gamepad logo-small"></span>
-            <h4>GAMING NIGHTS</h4>
-            <p>Rent the game truck for a wild night with your friends!</p>
-        </div>
-        <div class="col-sm-4">
-            <span class="glyphicon fas fa-film logo-small"></span>
-            <h4>MOVIE NIGHTS</h4>
-            <p> Watch a movie inside of the truck with your friends! </p>
-        </div>
-    </div>
-<br>
-<br>
-<div class="row slideanim">
-    <div class="col-sm-4">
-        <span class="glyphicon fas fa-female logo-small"></span>
-        <h4>BACHELORETTE PARTIES</h4>
-        <p>Spend your last night as a single lady with your girlfriends!</p>
-    </div>
-    <div class="col-sm-4">
-        <span class="glyphicon fas fa-male logo-small"></span>
-        <h4>BACHELOR PARTIES</h4>
-        <p>Spend your last night single with the fellas!</p>
-    </div>
-    <div class="col-sm-4">
-        <span class="glyphicon fas fa-comment logo-small"></span>
-        <h4>ANYTHING!</h4>
-        <p>We will come to any event you can think of!</p>
-    </div>
-</div>
     </div>
 
     <div class="bgimg-4 w3-display-container w3-opacity-med" id="price">
@@ -213,96 +214,105 @@
     <div class=" w3-container w3-padding-64" id="sec4">
 
         <div class="columns">
-          <ul class="price">
-            <li class="header" style="background-color: #a8272c">1 HOUR</li>
-            <li style="color: red; font-size:20px"> $185 </li>
-            <li>20 Invitiations</li>
-            <li>7 32" (HD) TVs for general gaming</li>
-            <li>3 19" (HD) TVs for virtual reality gaming</li>
-            <li>Current and past-gen gaming systems</li>
-            <li class="grey"><a href="#" class="button">BOOK NOW</a></li>
-          </ul>
+            <ul class="price">
+                <li class="header" style="background-color: #a8272c">1 HOUR</li>
+                <li style="color: red; font-size:20px"> $185 | $100 PER ADDITIONAL HOUR </li>
+                <li>20 Invitiations</li>
+                <li>7 32" (HD) TVs for general gaming</li>
+                <li>3 19" (HD) TVs for virtual reality gaming</li>
+                <li>Current and past-gen gaming systems</li>
+                <li class="grey">
+                    <a href="#" class="button">BOOK NOW</a>
+                </li>
+            </ul>
         </div>
 
         <div class="columns">
-          <ul class="price">
-            <li class="header" style="background-color:#4CAF50">2 HOURS</li>
-            <li style="color: red; font-size:20px"> $285 </li>
-            <li>20 Invitiations</li>
-            <li>7 32" (HD) TVs for general gaming</li>
-            <li>3 19" (HD) TVs for virtual reality gaming</li>
-            <li>Current and past-gen gaming systems</li>
-            <li class="grey"><a href="#" class="button">BOOK NOW</a></li>
-          </ul>
-        </div>
-
-        <div class="columns">
-          <ul class="price">
-            <li class="header" style="background-color: #fea705">ADDITIONAL HOURS</li>
-            <li style="color: red; font-size:20px"> $85 </li>
-            <li>20 Invitiations</li>
-            <li>7 32" (HD) TVs for general gaming</li>
-            <li>3 19" (HD) TVs for virtual reality gaming</li>
-            <li>Current and past-gen gaming systems</li>
-            <li class="grey"><a href="#" class="button">BOOK NOW</a></li>
-          </ul>
+            <ul class="price">
+                <li class="header" style="background-color:#4CAF50">2 HOURS</li>
+                <li style="color: red; font-size:20px"> $285 | $100 PER ADDITIONAL HOUR</li>
+                <li>20 Invitiations</li>
+                <li>7 32" (HD) TVs for general gaming</li>
+                <li>3 19" (HD) TVs for virtual reality gaming</li>
+                <li>Current and past-gen gaming systems</li>
+                <li class="grey">
+                    <a href="#" class="button">BOOK NOW</a>
+                </li>
+            </ul>
         </div>
         <!-- Policies -->
         <h2>Policies / FAQs</h2>
 
-        <button onclick="toggleAccordion('cancel')" class="w3-btn w3-block w3-black w3-left-align">Cancellation Policy <i class="fa fa-caret-down"></i></button>
+        <button onclick="toggleAccordion('cancel')" class="w3-btn w3-block w3-black w3-left-align">Cancellation Policy
+            <i class="fa fa-caret-down"></i>
+        </button>
         <div id="cancel" class="w3-container w3-hide">
-            <h4>A valid credit or debit card is required to guarantee payment for your TOP QUALITY GAMING party. If party is canceled you
-            will loose all payment made towards the trailer rental for the requested day.</h4>
-     
+            <h4>A valid credit or debit card is required to guarantee payment for your TOP QUALITY GAMING party. If party is
+                canceled you will loose all payment made towards the trailer rental for the requested day.</h4>
+
         </div>
-                
-        <button onclick="toggleAccordion('privacy')" class="w3-btn w3-block w3-black w3-left-align">Privacy Policy <i class="fa fa-caret-down"></i></button>
+
+        <button onclick="toggleAccordion('privacy')" class="w3-btn w3-block w3-black w3-left-align">Privacy Policy
+            <i class="fa fa-caret-down"></i>
+        </button>
         <div id="privacy" class="w3-container w3-hide">
-            <h4>TOP QUALITY GAMING is committed in protecting your privacy. Information collected on the site is to help make booking with
-                TOP QUALITY GAMING simple and easy as possible.</h4>
+            <h4>TOP QUALITY GAMING is committed in protecting your privacy. Information collected on the site is to help make
+                booking with TOP QUALITY GAMING simple and easy as possible.</h4>
         </div>
 
-        <button onclick="toggleAccordion('travel')" class="w3-btn w3-block w3-black w3-left-align">Travel / Fuel Fees <i class="fa fa-caret-down"></i></button>
+        <button onclick="toggleAccordion('travel')" class="w3-btn w3-block w3-black w3-left-align">Travel / Fuel Fees
+            <i class="fa fa-caret-down"></i>
+        </button>
         <div id="travel" class="w3-container w3-hide">
-            <h4>TOP QUALITY GAMING may apply additional pricing for events outside of Davidson/Rutherford Counties. Contact us to discuss
-                specific details about your party.
+            <h4>TOP QUALITY GAMING may apply additional pricing for events outside of Davidson/Rutherford Counties. Contact us
+                to discuss specific details about your party.
             </h4>
         </div>
 
-        <button onclick="toggleAccordion('damage')" class="w3-btn w3-block w3-black w3-left-align">Damage / Injury<i class="fa fa-caret-down"></i></button>
+        <button onclick="toggleAccordion('damage')" class="w3-btn w3-block w3-black w3-left-align">Damage / Injury
+            <i class="fa fa-caret-down"></i>
+        </button>
         <div id="damage" class="w3-container w3-hide">
-            <h4>TOP QUALITY GAMING or any employees will not be responsible for any damage to property resulting from a request by the client
-                to position the trailer in a specific location. This includes both above and below ground property/equipment damage.
-                Client will be held responsible for any damage to trailer or equipment resulting from carelessness of the clients guests.
-                TOP QUALITY GAMING is not responsible for anyone under the influence or recreational drug use. All liability for damages
-                or injuries are the sole responsibility of the client or party host.
+            <h4>TOP QUALITY GAMING or any employees will not be responsible for any damage to property resulting from a request
+                by the client to position the trailer in a specific location. This includes both above and below ground property/equipment
+                damage. Client will be held responsible for any damage to trailer or equipment resulting from carelessness
+                of the clients guests. TOP QUALITY GAMING is not responsible for anyone under the influence or recreational
+                drug use. All liability for damages or injuries are the sole responsibility of the client or party host.
             </h4>
         </div>
 
-        <button onclick="toggleAccordion('food')" class="w3-btn w3-block w3-black w3-left-align">Food / Drinks <i class="fa fa-caret-down"></i></button>
+        <button onclick="toggleAccordion('food')" class="w3-btn w3-block w3-black w3-left-align">Food / Drinks
+            <i class="fa fa-caret-down"></i>
+        </button>
         <div id="food" class="w3-container w3-hide">
-            <h4>Food and drinks Are NOT permitted inside of the trailer. Guest may step outside the trailer to eat or have a drink. Any food/drink found
-            in trailer would be thrown away or guest would be asked to step outside until finished.</h4>
+            <h4>Food and drinks Are NOT permitted inside of the trailer. Guest may step outside the trailer to eat or have a
+                drink. Any food/drink found in trailer would be thrown away or guest would be asked to step outside until
+                finished.</h4>
         </div>
 
-        <button onclick="toggleAccordion('child')" class="w3-btn w3-block w3-black w3-left-align">Supervised Child(ren) <i class="fa fa-caret-down"></i></button>
+        <button onclick="toggleAccordion('child')" class="w3-btn w3-block w3-black w3-left-align">Supervised Child(ren)
+            <i class="fa fa-caret-down"></i>
+        </button>
         <div id="child" class="w3-container w3-hide">
-            <h4>TOP QUALITY GAMING recommends a parent or responsible adult to remain present inside or near game trailer at all times.
+            <h4>TOP QUALITY GAMING recommends a parent or responsible adult to remain present inside or near game trailer at
+                all times.
             </h4>
         </div>
 
-        <button onclick="toggleAccordion('weather')" class="w3-btn w3-block w3-black w3-left-align">Weather <i class="fa fa-caret-down"></i></button>
+        <button onclick="toggleAccordion('weather')" class="w3-btn w3-block w3-black w3-left-align">Weather
+            <i class="fa fa-caret-down"></i>
+        </button>
         <div id="weather" class="w3-container w3-hide">
-            <h4>Rain or shine TOP QUALITY GAMING will continue party. In the event weather is bad ie. thundering and lightning. Hailing or
-                damaging winds. Ice, snow, or sleet. TOP QUALITY GAMING will allow party or event to be rescheduled. </h4>
+            <h4>Rain or shine TOP QUALITY GAMING will continue party. In the event weather is bad ie. thundering and lightning.
+                Hailing or damaging winds. Ice, snow, or sleet. TOP QUALITY GAMING will allow party or event to be rescheduled.
+                </h4>
         </div>
 
     </div>
 
     <div class="bgimg-6 w3-display-container w3-opacity-med" id="contact">
         <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">  CONTACT </span>
+            <span class="w3-xxlarge w3-text-white w3-wide"> CONTACT </span>
         </div>
     </div>
 
@@ -310,12 +320,13 @@
     <div class=" w3-container w3-padding-64" id="sec4">
         <div class="w3-center">
             <div class="w3-row w3-padding-32">
-                <div class="w3-col m6 w3-large w3-margin-bottom">
+                <div class="w3-large w3-margin-bottom">
                     <i class="fa fa-map-marker" style="width:30px"></i> Nashville, TN
                     <br>
                     <i class="fa fa-phone" style="width:30px"></i> Phone: 615-218-7235
                     <br>
-                    <i class="fa fa-envelope" style="width:30px"> </i> Email: <a href="mailto:gamingtopquality@gmail.com?Subject=Gaming%20again" target="_top">gamingtopquality@gmail.com</a>
+                    <i class="fa fa-envelope" style="width:30px"> </i> Email:
+                    <a href="mailto:gamingtopquality@gmail.com?Subject=Gaming%20again" target="_top">gamingtopquality@gmail.com</a>
                     <br>
                 </div>
             </div>
@@ -330,7 +341,7 @@
             </a>
 
         </div>
-      </div>
+    </div>
     <footer class="w3-center" style="background-color: #0C1011"> © 2017 Top Quality Gaming </footer>
 
 </body>
