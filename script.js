@@ -15,3 +15,18 @@ function toggleAccordion(id) {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+angular.module('gameList', []).controller('listCtrl', function($scope){
+    $scope.gamesList = [
+          'Jani',
+          'Carl',
+          'Margareth',
+          'Hege',
+          'Joe',
+          'Gustav',
+          'Birgit',
+          'Mary',
+          'Kai'
+          
+    ]
+});

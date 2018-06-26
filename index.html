@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
         crossorigin="anonymous">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script>
         $(document).ready(function () {
             var myIndex = 0;
@@ -240,6 +240,8 @@
                 </li>
             </ul>
         </div>
+
+
         <!-- Policies -->
         <h2>Policies / FAQs</h2>
 
@@ -306,6 +308,13 @@
             <h4>Rain or shine TOP QUALITY GAMING will continue party. In the event weather is bad ie. thundering and lightning.
                 Hailing or damaging winds. Ice, snow, or sleet. TOP QUALITY GAMING will allow party or event to be rescheduled.
                 </h4>
+        </div>
+
+        <div ng-app="gameList" ng-controller="listCtrl">
+            <h3><input type="text" ng-model= "game" ></h3>
+            <ul>
+                <li style="color: white" ng-repeat="x in gamesList | filter: game">{{x}}</li>
+            </ul>
         </div>
 
     </div>
