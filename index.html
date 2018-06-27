@@ -21,22 +21,7 @@
 
     <script>
         $(document).ready(function () {
-            var myIndex = 0;
-            carousel();
 
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                myIndex++;
-                if (myIndex > x.length) {
-                    myIndex = 1
-                }
-                x[myIndex - 1].style.display = "block";
-                setTimeout(carousel, 2000); // Change image every 2 seconds
-            }
             // Add smooth scrolling to all links
             $("a").on('click', function (event) {
 
@@ -52,7 +37,7 @@
                     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
-                    }, 800, function () {
+                    }, 1000, function () {
 
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         window.location.hash = hash;
@@ -134,13 +119,13 @@
             </div>
             <div class="col-sm-4">
                 <span class="glyphicon fas fa-briefcase logo-small"></span>
-                <h4>COPORATE EVENTS</h4>
+                <h4>CORPORATE EVENTS</h4>
                 <p>Throw an office party for the staff!</p>
             </div>
             <div class="col-sm-4">
                 <span class="glyphicon fas fa-utensils logo-small"></span>
                 <h4>SCHOOL EVENTS</h4>
-                <p>Celerate with fun in the sun with us!</p>
+                <p>Celebrate with fun in the sun with us!</p>
             </div>
         </div>
         <br>
