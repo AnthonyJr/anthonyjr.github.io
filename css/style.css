@@ -45,7 +45,7 @@ body, html {
 
 .bgimg-3 {
     background-color: #0C1011;
-    background-image: url('../img/smash.png');
+    background-image: url('../img/driveclub.jpg');
     background-size: contain;
     max-height: 10220px;
     max-width: 10220px;
@@ -148,7 +148,7 @@ body, html {
 }
 
 .button {
-    background-color: #4CAF50;
+    background-color: #8ab619;
     border: none;
     color: white;
     padding: 10px 25px;
