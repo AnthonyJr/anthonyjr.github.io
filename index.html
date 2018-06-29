@@ -21,22 +21,7 @@
 
     <script>
         $(document).ready(function () {
-            var myIndex = 0;
-            carousel();
 
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-                myIndex++;
-                if (myIndex > x.length) {
-                    myIndex = 1
-                }
-                x[myIndex - 1].style.display = "block";
-                setTimeout(carousel, 2000); // Change image every 2 seconds
-            }
             // Add smooth scrolling to all links
             $("a").on('click', function (event) {
 
@@ -52,7 +37,7 @@
                     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
-                    }, 800, function () {
+                    }, 1000, function () {
 
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         window.location.hash = hash;
@@ -76,8 +61,9 @@
             <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
             <a href="#service" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICE</a>
             <a href="#price" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PRICE</a>
-            <a href="https://www.google.com" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESERVE NOW!</a>
             <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESERVE NOW!</a>
+
 
         </div>
     </div>
@@ -88,8 +74,8 @@
         <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
         <a href="#service" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICE</a>
         <a href="#price" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRICE</a>
-        <a href="https://www.google.com" class="w3-bar-item w3-button w3-padding-large">RESERVE NOW!</a>
         <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+        <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" class="w3-bar-item w3-button w3-padding-large">RESERVE NOW!</a>
 
     </div>
 
@@ -134,13 +120,13 @@
             </div>
             <div class="col-sm-4">
                 <span class="glyphicon fas fa-briefcase logo-small"></span>
-                <h4>COPORATE EVENTS</h4>
+                <h4>CORPORATE EVENTS</h4>
                 <p>Throw an office party for the staff!</p>
             </div>
             <div class="col-sm-4">
                 <span class="glyphicon fas fa-utensils logo-small"></span>
                 <h4>SCHOOL EVENTS</h4>
-                <p>Celerate with fun in the sun with us!</p>
+                <p>Celebrate with fun in the sun with us!</p>
             </div>
         </div>
         <br>
@@ -215,12 +201,12 @@
             <ul class="price">
                 <li class="header" style="background-color: #a8272c">1 HOUR</li>
                 <li style="color: red; font-size:20px"> $185 | $100 PER ADDITIONAL HOUR </li>
-                <li>20 Invitiations</li>
+                <li>20 Invitations</li>
                 <li>7 32" (HD) TVs for general gaming</li>
                 <li>3 19" (HD) TVs for virtual reality gaming</li>
                 <li>Current and past-gen gaming systems</li>
                 <li class="grey">
-                    <a href="#" class="button">BOOK NOW</a>
+                    <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" class="button">BOOK NOW</a>
                 </li>
             </ul>
         </div>
@@ -229,12 +215,12 @@
             <ul class="price">
                 <li class="header" style="background-color:#8ab619">2 HOURS</li>
                 <li style="color: red; font-size:20px"> $285 | $100 PER ADDITIONAL HOUR</li>
-                <li>20 Invitiations</li>
+                <li>20 Invitations</li>
                 <li>7 32" (HD) TVs for general gaming</li>
                 <li>3 19" (HD) TVs for virtual reality gaming</li>
                 <li>Current and past-gen gaming systems</li>
                 <li class="grey">
-                    <a href="#" class="button">BOOK NOW</a>
+                    <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" class="button">BOOK NOW</a>
                 </li>
             </ul>
         </div>
@@ -246,7 +232,7 @@
         </button>
         <div id="cancel" class="w3-container w3-hide">
             <h4>A valid credit or debit card is required to guarantee payment for your TOP QUALITY GAMING party. If party is
-                canceled you will loose all payment made towards the trailer rental for the requested day.</h4>
+                canceled before 24 hours you will lose all payment made towards the trailer rental for the requested day.</h4>
 
         </div>
 
@@ -340,7 +326,7 @@
 
         </div>
     </div>
-    <footer class="w3-center" style="background-color: #0C1011"> © 2017 Top Quality Gaming </footer>
+    <footer class="w3-center" style="background-color: #0C1011"> © 2018 Top Quality Gaming </footer>
 
 </body>
 
