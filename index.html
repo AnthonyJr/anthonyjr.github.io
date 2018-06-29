@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <script src="script.js"></script>
     <title>Top Quality Gaming</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -45,6 +44,25 @@
                 } // End if
             });
         });
+
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        function toggleAccordion(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show",
+                    "");
+            }
+        }
     </script>
 
 </head>
@@ -63,7 +81,6 @@
             <a href="#price" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PRICE</a>
             <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
             <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESERVE NOW!</a>
-
 
         </div>
     </div>
@@ -98,7 +115,8 @@
             to have their choice of play, whether solo, playing an individual game, or with a group, playing the same game.</h3>
         <h3 class="" id="sec2_descrip">Let Top Quality Gaming provide you and your guests with fun and excitement at all of your events. Call us now for
             booking inquiries at (615) 218-7235 or email us at gamingtopquality@gmail.com. We look forward to serving your
-            event!</h3>
+            event!
+        </h3>
 
     </div>
 
@@ -271,7 +289,8 @@
         <div id="food" class="w3-container w3-hide">
             <h4>Food and drinks Are NOT permitted inside of the trailer. Guest may step outside the trailer to eat or have a
                 drink. Any food/drink found in trailer would be thrown away or guest would be asked to step outside until
-                finished.</h4>
+                finished.
+            </h4>
         </div>
 
         <button onclick="toggleAccordion('child')" class="w3-btn w3-block w3-black w3-left-align">Supervised Child(ren)
@@ -289,7 +308,7 @@
         <div id="weather" class="w3-container w3-hide">
             <h4>Rain or shine TOP QUALITY GAMING will continue party. In the event weather is bad ie. thundering and lightning.
                 Hailing or damaging winds. Ice, snow, or sleet. TOP QUALITY GAMING will allow party or event to be rescheduled.
-                </h4>
+            </h4>
         </div>
 
     </div>
