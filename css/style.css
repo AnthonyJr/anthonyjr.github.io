@@ -21,7 +21,7 @@ body, html {
 }
 
 .bgimg-1 {
-    background-image: url('../img/logo.jpg');
+    background-image: url('../img/logo_clear.jpg');
     background-size: contain;
     background-position: center;
     max-height: 10220px;
