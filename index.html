@@ -1,208 +1,424 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-    <title>W3.CSS Template</title>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#8ab619" />
+    <link rel="icon" type="image/jpg" href="img/logo.jpg" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="css/carousel.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <title>Top Quality Gaming</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+
+            $('.carousel').carousel({
+            interval: 3000
+                });
+
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1000, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        function toggleAccordion(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show",
+                    "");
+            }
+        }
+    </script>
+
 </head>
 
+<body style="background-color: #0C1011">
 
-    <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #8ab619!important">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Price</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Reserve Now!</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="border: 10px solid #8ab619">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="img/top_quality_gaming_truck.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/IMG_7557.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="img/IMG_7591.jpg" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 
-        <!-- Navbar (sit on top) -->
-        <div class="w3-top">
-            <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-                <a class="w3-bar-item"> <img src="img/logo_nav.png" style="width: 200px"> </a>
-                <!-- Float links to the right. Hide them on small screens -->
-                <div class="w3-right w3-hide-small">
-                    <a href="#projects" class="w3-bar-item w3-button">Home</a>
-                    <a href="#about" class="w3-bar-item w3-button">About</a>
-                    <div class="w3-dropdown-hover">
-                        <button class="w3-button"> S e r v i c e s</a>
+    <div class="bgimg-2 w3-display-container w3-grayscale" id="service">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide"> ABOUT </span>
+        </div>
+    </div>
+
+    <!-- w3-content -->
+    <div class="container marketing">
+        <div class="row featurette" style="background-color: #0C1011">
+
+            <div class="col-md-7" style="">
+                <br><br>
+                <h2 class="featurette-heading">Top <span class="text-muted">Quality Gaming</span></h2><br>
+                <p class="lead">Top Quality Gaming is a mobile video gaming trailer located just outside of Nashville,
+                    TN. Top
+                    Quality Gaming was
+                    established to help build personal connections and strengthen bonds while gaming. It is designed
+                    for
+                    everyone
+                    to have their choice of play, whether solo, playing an individual game, or with a group, playing
+                    the same
+                    game..</p>
+
+                <p class="lead">Let Top Quality Gaming provide you and your guests with fun and excitement at all of
+                    your
+                    events. Call us now for
+                    booking inquiries at (615) 218-7235 or email us at gamingtopquality@gmail.com. We look forward to
+                    serving
+                    your
+                    event!</p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" alt="500x500" style="width: 400; height: 400; margin: 5px"
+                    src="img/camice.png" data-holder-rendered="true">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 w3-display-container w3-grayscale" id="service">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide"> SERVICE </span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class=" w3-container w3-padding-64" id="sec3">
+
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-birthday-cake logo-small"></span>
+                <h4>BIRTHDAY EVENTS</h4>
+                <p>Give the gift of gaming!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-briefcase logo-small"></span>
+                <h4>CORPORATE EVENTS</h4>
+                <p>Throw an office party for the staff!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-utensils logo-small"></span>
+                <h4>SCHOOL EVENTS</h4>
+                <p>Celebrate with fun in the sun with us!</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-graduation-cap logo-small"></span>
+                <h4>GRADUATION EVENTS</h4>
+                <p>Celebrate this milestone in life with videogames!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-ribbon logo-small"></span>
+                <h4>FUNDRAISING EVENTS</h4>
+                <p> Rent us out and host tournaments for a good cause! </p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-key logo-small"></span>
+                <h4>GRAND OPENINGS</h4>
+                <p> Opening a business? We got you covered.</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-crown logo-small"></span>
+                <h4>CARNIVALS</h4>
+                <p>Rent us out at a fair!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-gamepad logo-small"></span>
+                <h4>GAMING NIGHTS</h4>
+                <p>Rent the game truck for a wild night with your friends!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-users logo-small"></span>
+                <h4>FAMILY GATHERING</h4>
+                <p> Settle that rivalry in Mortal Kombat!</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-female logo-small"></span>
+                <h4>BACHELORETTE PARTIES</h4>
+                <p>Spend your last night as a single lady with your girlfriends!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-male logo-small"></span>
+                <h4>BACHELOR PARTIES</h4>
+                <p>Spend your last night single with the fellas!</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon fas fa-comment logo-small"></span>
+                <h4>ANYTHING!</h4>
+                <p>We will come to you with any event you can think of!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bgimg-4 w3-display-container w3-grayscale" id="price">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide"> PRICES </span>
+        </div>
+    </div>
+
+    <!-- Container (Prices Section) -->
+    <div class=" w3-container w3-padding-64" id="sec4">
+
+        <div class="columns">
+            <ul class="price" style="border-radius: 25px">
+                <li class="header" style="background-color: #a8272c; border-radius: 25px">1 HOUR</li>
+                <li style="color: red; font-size:20px"> $185</li>
+                <li>7 32" (HD) TVs for general gaming</li>
+                <li>2 19" (HD) TVs for virtual reality gaming</li>
+                <li>Current and past-gen gaming systems</li>
+                <li class="grey" style="border-radius: 25px">
+                    <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" class="button"
+                        style="border-radius: 25px">BOOK NOW</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="columns">
+            <ul class="price">
+                <li class="header" style="background-color:#8ab619">2 HOURS</li>
+                <li style="color: red; font-size:20px"> $285 </li>
+                <li>7 32" (HD) TVs for general gaming</li>
+                <li>2 19" (HD) TVs for virtual reality gaming</li>
+                <li>Current and past-gen gaming systems</li>
+                <li class="grey">
+                    <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" class="button">BOOK
+                        NOW</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="bgimg-6 w3-display-container w3-opacity-med" id="contact">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide"> POLICIES & FAQS </span>
+        </div>
+    </div>
+
+    <div class="container" style="padding: 64px">
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            Collapsible Group Item #1
                         </button>
-                        <div class="w3-dropdown-content w3-bar-block w3-card-4 ">
-                            <a href="#" class="w3-bar-item w3-button">Water Damage</a>
-                            <a href="#" class="w3-bar-item w3-button">Fire Damage</a>
-                            <a href="#" class="w3-bar-item w3-button">Mold Remidiation</a>
-                            <a href="#" class="w3-bar-item w3-button">Commercial Restoration</a>
-                            <a href="#" class="w3-bar-item w3-button">Emergency Services</a>
-                            <a href="#" class="w3-bar-item w3-button">Disaster Services</a>
-                            <a href="#" class="w3-bar-item w3-button">Storm Damage Restoration</a>
-                            <a href="#" class="w3-bar-item w3-button">Residential Remodeling and Repair</a>
-                        </div>
-                    </div>
-                    <a href="#contact" class="w3-bar-item w3-button">Request A Service</a>
-                    <a href="#contact" class="w3-bar-item w3-button">Book Now!</a>
-                    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
-                    <a class="w3-bar-item w3-red"> 24/7 Emergency Services 1-800-859-6237 </a>
+                    </h5>
+                </div>
 
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf
+                        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                        eiusmod.
+                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                        assumenda
+                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                        sapiente ea
+                        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
+                        denim
+                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            Collapsible Group Item #2
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf
+                        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                        eiusmod.
+                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                        assumenda
+                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                        sapiente ea
+                        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
+                        denim
+                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            Collapsible Group Item #3
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                        3 wolf
+                        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                        eiusmod.
+                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                        assumenda
+                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+                        sapiente ea
+                        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw
+                        denim
+                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="first-slide" src="img/construction1.jpg" alt="First slide">
-                    <div class="container">
-                        <div class="carousel-caption text-left">
-                            <h1>#1 Restoration Service in the Lexington KY area</h1>
-                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                            <p><a class="btn btn-lg btn-primary" href="" role="button">Request </a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="second-slide" src="img/construction2.jpg" alt="Second slide">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <h1>Another example headline.</h1>
-                            <p>Stuff goes here.</p>
-                            <p><a class="btn btn-lg btn-primary" href="" role="button">Learn
-                                    more</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="third-slide" src="img/construction3.jpg" alt="Third slide">
-                    <div class="container">
-                        <div class="carousel-caption text-right">
-                            <h1>Another One</h1>
-                            <p>blah blah blah blah </p>
-                            <p><a class="btn btn-lg btn-primary" href="" role="button">Browse
-                                    </a></p>
-                        </div>
-                    </div>
+
+
+    <div class="bgimg-6 w3-display-container w3-opacity-med" id="contact">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide"> CONTACT </span>
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class=" w3-container w3-padding-64" id="sec4">
+        <div class="w3-center">
+            <div class="w3-row w3-padding-32">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker" style="width:30px"></i> Nashville, TN
+                    <br>
+                    <i class="fa fa-phone" style="width:30px"></i> Phone: 615-218-7235
+                    <br>
+                    <i class="fa fa-envelope" style="width:30px"> </i> Email:
+                    <a href="mailto:gamingtopquality@gmail.com?Subject=Gaming%20again" target="_top">gamingtopquality@gmail.com</a>
+                    <br>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+            <a href="https://www.instagram.com/topqualitygaming/" target="_blank">
+                <img src="img/social-instagram-white.svg">
             </a>
-            <a class="carousel-control-next"  role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+            <a href="https://twitter.com/topqualitygami1" target="_blank">
+                <img src="img/social-twitter-white.svg">
             </a>
-        </div>
-
-        <div class="container marketing">
-
-            <!-- Three columns of text below the carousel -->
-            <div class="row">
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="img/gears.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Certified Experts</h2>
-                    <p>All our specialists are completely prepared and affirmed by the IICRC and IAQA to guarantee they have the skill to give the most elevated amount of administration to you.</p>
-                    <p><a class="btn btn-secondary"  role="button">View details
-                                »
-                            </a></p>
-                </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="img/satisfaction.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Satisfaction Guaranteed</h2>
-                    <p>We give 100% fulfillment ensure. We won't quit working until the point that you are completely happy with the rebuilding or your property.
-                    </p>
-                    <p><a class="btn btn-secondary"  role="button">View details
-                                »
-                            </a></p>
-                </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <img class="rounded-circle" src="img/24:7.png" alt="Generic placeholder image" width="140" height="140">
-                    <h2>Avaiable 24/7</h2>
-                    <p>we works twenty-four hours a day, seven days a week to provide excellent customer service and dependability when disaster strikes.
-                    </p>
-                    <p><a class="btn btn-secondary"  role="button">View details
-                                »
-                            </a></p>
-                </div>
-                <!-- /.col-lg-4 -->
-            </div>
-            <!-- /.row -->
-
-            <!-- START THE FEATURETTES -->
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Fire Damage?<span class="text-muted"> We got you covered. </span></h2>
-                    <p class="lead">
-                        At the point when the fire is out, timing is everything. Fire harm repairs must start ASAP to expand viability. We answer the call and promptly move without hesitation day in and day out. Perceiving the injury and enthusiastic bombshell that inhabitants endure, we work rapidly and thoughtfully to moderate harm on salvageable property, for example, family unit things, apparatuses, metals and different substance. Our condition of-the science systems and cleaning forms regularly counteract substitution costs, in this way decreasing expenses. Fire and smoke harm rebuilding requires learning and aptitude; our PuroClean experts have the mastery to carry out the activity right. </p>
-                </div>
-                <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto" alt="500x500" style="width: 500px; height: 500px;" src="img/housefire2.jpg">
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading"> Water Damage? <span class="text-muted">We will get you afloat</span></h2>
-                    <p class="lead">Water harm can be sudden, instantly wreaking devastation on your property. In the end, that harm can likewise turn into a wellbeing danger and prompt shape issues. Water harm contracts cowhide, twists wood, harms cover, and causes different difficult issues. Prompt harm repair is urgent in keeping water harm from additionally wrecking your private or business property.
-                    </p>
-                </div>
-                <div class="col-md-5 order-md-1">
-                    <img class="featurette-image img-fluid mx-auto"  alt="500x500" src="img/waterdamage2.jpg" data-holder-rendered="true" style="width: 500px; height: 500px;">
-                </div>
-            </div>
-
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h2 class="featurette-heading">Mold Problem? <span class="text-muted">Consider it gone.</span></h2>
-                    <p class="lead">Mold can be expensive, hard to evacuate, and hazardous for your wellbeing. Inappropriately took care of water harm can prompt form. In the event that the shape is left unchecked, it could additionally bring about lessened indoor air quality and a hazardous domain. In the event that your home or business building has a shape issue, don't dither to enroll our affirmed rebuilding authorities to enable you to expel form and reestablish your property.</p>
-                </div>
-                <div class="col-md-5">
-                    <img class="featurette-image img-fluid mx-auto"  alt="500x500" src="img/molddamage.png" data-holder-rendered="true" style="width: 500px; height: 500px;">
-                </div>
-            </div>
-            <button type="button" class="btn btn-primary"><a href="pages/services/services_main.html" >More Services...</a></button>
-
-
-            <hr class="featurette-divider">
-
-            <!-- /END THE FEATURETTES -->
+            <a href="https://www.facebook.com/Top-Quality-Gaming-1967430873267641/" target="_blank">
+                <img src="img/social-facebook-white.svg">
+            </a>
 
         </div>
+    </div>
 
-        <div class="w3-container w3-padding-32" id="contact">
-            <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-            <p>Lets get in touch and talk about your next project.</p>
-            <form action="/action_page.php" target="_blank">
-                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="Email">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
-                <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="Comment">
-                <button class="w3-button w3-black w3-section" type="submit">
-                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                </button>
-            </form>
-        </div>
+    <footer class="w3-center" style="background-color: #0C1011"> © 2018 Top Quality Gaming </footer>
 
-        <!-- End page content -->
-        </div>
-
-
-        <script src="css/jquery-3.3.1.slim.min.js"></script>
-        <script src="css/holder.min.js"></script>
-        <script src="css/bootstrap.min.js"></script>
-        <script src="css/popper.min.js"></script>
-        <script src="css/holder.min.js"></script>
-
-
-    </body>
+</body>
 
 </html>
