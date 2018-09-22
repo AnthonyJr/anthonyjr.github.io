@@ -26,6 +26,10 @@
             interval: 3000
                 });
 
+$('.navbar-nav>li>a').on('click', function(){
+$('.navbar-collapse').collapse('hide');
+});
+
             // Add smooth scrolling to all links
             $("a").on('click', function(event) {
 
@@ -68,6 +72,8 @@
                     "");
             }
         }
+
+        
     </script>
 
 </head>
@@ -85,19 +91,22 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Service</a>
+                    <a class="nav-link" href="#service">Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Price</a>
+                    <a class="nav-link" href="#price">Price</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#faq">FAQs</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Reserve Now!</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn">Reserve Now!</a>
                 </li>
             </ul>
         </div>
@@ -129,7 +138,7 @@
       </a>
     </div>
 
-        <div class="bgimg-2 w3-display-container w3-grayscale" id="service">
+        <div class="bgimg-2 w3-display-container w3-grayscale" id="about">
             <div class="w3-display-middle">
                 <span class="w3-xxlarge w3-text-white w3-wide"> ABOUT </span>
             </div>
@@ -154,10 +163,13 @@
             booking inquiries at (615) 218-7235 or email us at gamingtopquality@gmail.com. We look forward to serving
             your
             event!</p>
+
+            <p>- Camice Watson, Owner</p>
     </div>
     <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto"  alt="500x500" style="width: 400; height: 400; margin: 5px"
+        <img class="featurette-image img-fluid mx-auto"  alt="500x500" style="width: 400; height: 400; margin: 50px"
             src="img/camice.png" data-holder-rendered="true">
+
     </div>
 </div>
     </div>
@@ -171,7 +183,7 @@
     </div>
 
     <!-- Container (Contact Section) -->
-    <div class=" w3-container w3-padding-64" id="sec3">
+    <div class=" container w3-padding-64" id="sec3">
 
         <div class="row slideanim">
             <div class="col-sm-4">
@@ -259,13 +271,13 @@
     <div class=" w3-container w3-padding-64" id="sec4">
 
         <div class="columns">
-            <ul class="price" style="border-radius: 25px" >
-                <li class="header" style="background-color: #a8272c; border-radius: 25px">1 HOUR</li>
+            <ul class="price" >
+                <li class="header" style="background-color: #a8272c;">1 HOUR</li>
                 <li style="color: red; font-size:20px"> $185</li>
                 <li>7 32" (HD) TVs for general gaming</li>
                 <li>2 19" (HD) TVs for virtual reality gaming</li>
                 <li>Current and past-gen gaming systems</li>
-                <li class="grey" style="border-radius: 25px">
+                <li class="grey">
                     <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" class="button" style="border-radius: 25px">BOOK NOW</a>
                 </li>
             </ul>
@@ -279,84 +291,75 @@
                 <li>2 19" (HD) TVs for virtual reality gaming</li>
                 <li>Current and past-gen gaming systems</li>
                 <li class="grey">
-                    <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" class="button">BOOK NOW</a>
+                    <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" class="button" style="border-radius: 25px">BOOK NOW</a>
                 </li>
             </ul>
         </div>
 
     </div>
 
-    <div class="bgimg-6 w3-display-container w3-opacity-med" id="contact">
+    <div class="bgimg-6 w3-display-container w3-opacity-med" id="faq">
         <div class="w3-display-middle">
             <span class="w3-xxlarge w3-text-white w3-wide"> POLICIES & FAQS </span>
         </div>
     </div>
+<div class="container w3-padding-64" id="sec4">
 
-    <div class="container" style="padding: 64px">
-        <div class="accordion" id="accordionExample">
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                            aria-expanded="true" aria-controls="collapseOne">
-                            Collapsible Group Item #1
-                        </button>
-                    </h5>
-                </div>
-        
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-                        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
-                            aria-expanded="false" aria-controls="collapseTwo">
-                            Collapsible Group Item #2
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-                        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
-                            aria-expanded="false" aria-controls="collapseThree">
-                            Collapsible Group Item #3
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-                        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1>Cancellation Policy</h1>
+    <h4>A valid credit or debit card is required to guarantee payment for your TOP QUALITY GAMING party. If party is
+        canceled
+        24 hours before your appointment you will be charged $50</h4>
+    <hr>
+
+    <h1>Privacy Policy</h1>
+    <h4>TOP QUALITY GAMING is committed in protecting your privacy. Information collected on the site is to help make
+        booking
+        with TOP QUALITY GAMING simple and easy as possible.</h4>
+    <hr>
+
+    <h1>Travel / Fuel Fees</h1>
+    <h4>TOP QUALITY GAMING may apply additional pricing for events outside of Davidson/Rutherford Counties. Contact us
+        to discuss
+        specific details about your party.
+    </h4>
+    <hr>
+    <h1>Damage / Injury
+    </h1>
+    <h4>TOP QUALITY GAMING or any employees will not be responsible for any damage to property resulting from a request
+        by the
+        client to position the trailer in a specific location. This includes both above and below ground
+        property/equipment
+        damage. Client will be held responsible for any damage to trailer or equipment resulting from carelessness of
+        the
+        clients guests. TOP QUALITY GAMING is not responsible for anyone under the influence or recreational drug use.
+        All
+        liability for damages or injuries are the sole responsibility of the client or party host.
+    </h4>
+    <hr>
+    <h1>Food / Drinks
+    </h1>
+    <h4>Food and drinks Are NOT permitted inside of the trailer. Guest may step outside the trailer to eat or have a
+        drink. Any
+        food/drink found in trailer would be thrown away or guest would be asked to step outside until finished.
+    </h4>
+    <hr>
+
+    <h1>Supervised Child(ren)
+    </h1>
+    <h4>TOP QUALITY GAMING recommends a parent or responsible adult to remain present inside or near game trailer at
+        all times.
+    </h4>
+    <hr>
+
+    <h1>Weather
+    </h1>
+    <h4>Rain or shine TOP QUALITY GAMING will continue party. In the event weather is bad ie. thundering and lightning.
+        Hailing
+        or damaging winds. Ice, snow, or sleet. TOP QUALITY GAMING will allow party or event to be rescheduled.
+    </h4>
+    <hr>
+</div>
+
 
 
 

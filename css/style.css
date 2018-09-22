@@ -20,7 +20,27 @@ body, html {
     background-color: #0C1011;
 }
 
+.price {
+    border-radius: 50px 0px 50px 0px;
 
+
+}
+    .header {
+        border-radius: 50px 0px 0px 0px;
+    }
+
+    .grey {
+        border-radius: 0px 0px 50px 0px;
+    }
+
+    .card-body {
+        background-color: #0C1011;
+    }
+/* 
+* {
+    font-family: Impact, Charcoal, sans-serif	
+
+} */
 
 .bgimg-1 {
     background-image: url('../img/logo_clear.jpg');
