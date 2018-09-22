@@ -1,4 +1,4 @@
-/*body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}*/
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 
 body, html {
     height: 100%;
@@ -20,15 +20,18 @@ body, html {
     background-color: #0C1011;
 }
 
+
+
 .bgimg-1 {
-    background-image: url('../img/logo.jpg');
+    background-image: url('../img/logo_clear.jpg');
     background-size: contain;
     background-position: center;
     max-height: 10220px;
     max-width: 10220px;
-    height: 100%;
-    width: 100%;
+    height: 400px;
+    width: 100vh;
 }
+
 
 /* Second image (Portfolio) */
 
@@ -101,6 +104,9 @@ body, html {
     .bgimg-1 {
         height: 190px;
         margin-top: 10%;
+    }
+    .slideshow {
+        height: 190px;
     }
     h3 {
         font-size: 14px;

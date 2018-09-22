@@ -14,15 +14,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <title>Top Quality Gaming</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="js/bootstrap.min.js" ></script>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
+
+
+            $('.carousel').carousel({
+            interval: 3000
+                });
 
             // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
+            $("a").on('click', function(event) {
 
                 // Make sure this.hash has a value before overriding default behavior
                 if (this.hash !== "") {
@@ -36,7 +41,7 @@
                     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
-                    }, 1000, function () {
+                    }, 1000, function() {
 
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         window.location.hash = hash;
@@ -67,58 +72,96 @@
 
 </head>
 
-<body>
-    <!-- Navbar -->
-    <div class="w3-top">
-        <div class="w3-bar w3-black w3-card" style="background-color: #8ab619!important">
-            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()"
-                title="Toggle Navigation Menu">
-                <i class="fa fa-bars"></i>
-            </a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-            <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-            <a href="#service" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICE</a>
-            <a href="#price" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PRICE</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-            <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESERVE NOW!</a>
+<body style="background-color: #0C1011">
 
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color: #8ab619!important">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Price</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Reserve Now!</a>
+                </li>
+            </ul>
         </div>
-    </div>
-
-    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px; background-color:#8ab619">
-        <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
-        <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
-        <a href="#service" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SERVICE</a>
-        <a href="#price" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRICE</a>
-        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-        <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" class="w3-bar-item w3-button w3-padding-large">RESERVE NOW!</a>
-
-    </div>
-
-    <!-- First Parallax Image with Logo Text -->
-
-    <div class="bgimg-1  w3-opacity-min animated fadeIn" id="home"></div>
-    <!-- Second Parallax Image with Portfolio Text -->
-    <div class="bgimg-2 w3-display-container w3-grayscale" id="about">
-        <div class="w3-display-middle">
-            <span class="w3-xxlarge w3-text-white w3-wide">ABOUT</span>
+    </nav>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="border: 10px solid #8ab619">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/top_quality_gaming_truck.jpg" alt="First slide">
         </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/IMG_7557.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/IMG_7591.jpg" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
 
-    <!-- Container (Portfolio Section) -->
+        <div class="bgimg-2 w3-display-container w3-grayscale" id="service">
+            <div class="w3-display-middle">
+                <span class="w3-xxlarge w3-text-white w3-wide"> ABOUT </span>
+            </div>
+        </div>
+
     <!-- w3-content -->
-    <div class=" w3-container w3-padding-64" id="sec2">
+    <div class="container marketing">
+<div class="row featurette" style="background-color: #0C1011">
 
-        <h3 id="sec2_descrip" class="w3-right">Top Quality Gaming is a mobile video gaming trailer located just outside of Nashville, TN. Top Quality Gaming was
-            established to help build personal connections and strengthen bonds while gaming. It is designed for everyone
-            to have their choice of play, whether solo, playing an individual game, or with a group, playing the same game.</h3>
-        <h3 class="" id="sec2_descrip">Let Top Quality Gaming provide you and your guests with fun and excitement at all of your events. Call us now for
-            booking inquiries at (615) 218-7235 or email us at gamingtopquality@gmail.com. We look forward to serving your
-            event!
-        </h3>
+    <div class="col-md-7" style="">
+        <br><br>
+        <h2 class="featurette-heading">Top <span class="text-muted">Quality Gaming</span></h2><br>
+        <p class="lead">Top Quality Gaming is a mobile video gaming trailer located just outside of Nashville, TN. Top
+            Quality Gaming was
+            established to help build personal connections and strengthen bonds while gaming. It is designed for
+            everyone
+            to have their choice of play, whether solo, playing an individual game, or with a group, playing the same
+            game..</p>
 
+        <p class="lead">Let Top Quality Gaming provide you and your guests with fun and excitement at all of your
+            events. Call us now for
+            booking inquiries at (615) 218-7235 or email us at gamingtopquality@gmail.com. We look forward to serving
+            your
+            event!</p>
     </div>
+    <div class="col-md-5">
+        <img class="featurette-image img-fluid mx-auto"  alt="500x500" style="width: 400; height: 400; margin: 5px"
+            src="img/camice.png" data-holder-rendered="true">
+    </div>
+</div>
+    </div>
+
 
     <!-- Third Parallax Image with Portfolio Text -->
     <div class="bgimg-3 w3-display-container w3-grayscale" id="service">
@@ -216,15 +259,14 @@
     <div class=" w3-container w3-padding-64" id="sec4">
 
         <div class="columns">
-            <ul class="price">
-                <li class="header" style="background-color: #a8272c">1 HOUR</li>
-                <li style="color: red; font-size:20px"> $185 | $100 PER ADDITIONAL HOUR </li>
-                <li>20 Invitations</li>
+            <ul class="price" style="border-radius: 25px" >
+                <li class="header" style="background-color: #a8272c; border-radius: 25px">1 HOUR</li>
+                <li style="color: red; font-size:20px"> $185</li>
                 <li>7 32" (HD) TVs for general gaming</li>
-                <li>3 19" (HD) TVs for virtual reality gaming</li>
+                <li>2 19" (HD) TVs for virtual reality gaming</li>
                 <li>Current and past-gen gaming systems</li>
-                <li class="grey">
-                    <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" class="button">BOOK NOW</a>
+                <li class="grey" style="border-radius: 25px">
+                    <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" class="button" style="border-radius: 25px">BOOK NOW</a>
                 </li>
             </ul>
         </div>
@@ -232,86 +274,91 @@
         <div class="columns">
             <ul class="price">
                 <li class="header" style="background-color:#8ab619">2 HOURS</li>
-                <li style="color: red; font-size:20px"> $285 | $100 PER ADDITIONAL HOUR</li>
-                <li>20 Invitations</li>
+                <li style="color: red; font-size:20px"> $285 </li>
                 <li>7 32" (HD) TVs for general gaming</li>
-                <li>3 19" (HD) TVs for virtual reality gaming</li>
+                <li>2 19" (HD) TVs for virtual reality gaming</li>
                 <li>Current and past-gen gaming systems</li>
                 <li class="grey">
                     <a href="https://squareup.com/appointments/book/D17HS35YZVQJZ/top-quality-gaming-smyrna-tn" class="button">BOOK NOW</a>
                 </li>
             </ul>
         </div>
-        <!-- Policies -->
-        <h2>Policies / FAQs</h2>
-
-        <button onclick="toggleAccordion('cancel')" class="w3-btn w3-block w3-black w3-left-align">Cancellation Policy
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div id="cancel" class="w3-container w3-hide">
-            <h4>A valid credit or debit card is required to guarantee payment for your TOP QUALITY GAMING party. If party is
-                canceled before 24 hours you will lose all payment made towards the trailer rental for the requested day.</h4>
-
-        </div>
-
-        <button onclick="toggleAccordion('privacy')" class="w3-btn w3-block w3-black w3-left-align">Privacy Policy
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div id="privacy" class="w3-container w3-hide">
-            <h4>TOP QUALITY GAMING is committed in protecting your privacy. Information collected on the site is to help make
-                booking with TOP QUALITY GAMING simple and easy as possible.</h4>
-        </div>
-
-        <button onclick="toggleAccordion('travel')" class="w3-btn w3-block w3-black w3-left-align">Travel / Fuel Fees
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div id="travel" class="w3-container w3-hide">
-            <h4>TOP QUALITY GAMING may apply additional pricing for events outside of Davidson/Rutherford Counties. Contact us
-                to discuss specific details about your party.
-            </h4>
-        </div>
-
-        <button onclick="toggleAccordion('damage')" class="w3-btn w3-block w3-black w3-left-align">Damage / Injury
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div id="damage" class="w3-container w3-hide">
-            <h4>TOP QUALITY GAMING or any employees will not be responsible for any damage to property resulting from a request
-                by the client to position the trailer in a specific location. This includes both above and below ground property/equipment
-                damage. Client will be held responsible for any damage to trailer or equipment resulting from carelessness
-                of the clients guests. TOP QUALITY GAMING is not responsible for anyone under the influence or recreational
-                drug use. All liability for damages or injuries are the sole responsibility of the client or party host.
-            </h4>
-        </div>
-
-        <button onclick="toggleAccordion('food')" class="w3-btn w3-block w3-black w3-left-align">Food / Drinks
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div id="food" class="w3-container w3-hide">
-            <h4>Food and drinks Are NOT permitted inside of the trailer. Guest may step outside the trailer to eat or have a
-                drink. Any food/drink found in trailer would be thrown away or guest would be asked to step outside until
-                finished.
-            </h4>
-        </div>
-
-        <button onclick="toggleAccordion('child')" class="w3-btn w3-block w3-black w3-left-align">Supervised Child(ren)
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div id="child" class="w3-container w3-hide">
-            <h4>TOP QUALITY GAMING recommends a parent or responsible adult to remain present inside or near game trailer at
-                all times.
-            </h4>
-        </div>
-
-        <button onclick="toggleAccordion('weather')" class="w3-btn w3-block w3-black w3-left-align">Weather
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div id="weather" class="w3-container w3-hide">
-            <h4>Rain or shine TOP QUALITY GAMING will continue party. In the event weather is bad ie. thundering and lightning.
-                Hailing or damaging winds. Ice, snow, or sleet. TOP QUALITY GAMING will allow party or event to be rescheduled.
-            </h4>
-        </div>
 
     </div>
+
+    <div class="bgimg-6 w3-display-container w3-opacity-med" id="contact">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide"> POLICIES & FAQS </span>
+        </div>
+    </div>
+
+    <div class="container" style="padding: 64px">
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            Collapsible Group Item #1
+                        </button>
+                    </h5>
+                </div>
+        
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            Collapsible Group Item #2
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            Collapsible Group Item #3
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                        moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                        Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                        proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                        aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <div class="bgimg-6 w3-display-container w3-opacity-med" id="contact">
         <div class="w3-display-middle">
@@ -345,6 +392,7 @@
 
         </div>
     </div>
+
     <footer class="w3-center" style="background-color: #0C1011"> © 2018 Top Quality Gaming </footer>
 
 </body>
